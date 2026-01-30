@@ -1,0 +1,43 @@
+/* === Custom Styling with Background Image === */
+body {
+  background: url("../img/banner.png") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  color: #fff;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: -1;
+}
+.blur-box {
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem;
+  color: #fff;
+}
+.form-auth {
+    max-width: 700px;
+    margin: 3rem auto;
+}
+.year-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.4);
+  transition: all .25s ease;
+}
+body.dark-mode {
+  background: #121212 !important;
+  color: #f8f9fa;
+}
+body.dark-mode .card, body.dark-mode .blur-box {
+  background: rgba(33,37,41,0.8);
+  color:#fff;
+}
+body.dark-mode .table {
+  color:#fff;
+}
